@@ -1,4 +1,3 @@
-
 class Card:
     def __init__(self, card_number, expiration_date, cvv_code, issue_date, owner_id=None, status_card="new"):
         self.card_number = card_number
