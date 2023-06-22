@@ -1,7 +1,7 @@
 import unittest
-
 import os
 import uuid
+
 from card_repository import CardRep, Card
 
 
