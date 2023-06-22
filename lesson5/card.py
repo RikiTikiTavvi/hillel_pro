@@ -20,6 +20,3 @@ class Card:
             return "Card blocked."
         else:
             return "Card cannot be blocked."
-
-    def secure_data(self):
-        return f"Secure data for Card {self.card_number}"
