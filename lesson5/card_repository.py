@@ -91,7 +91,6 @@ def main():
 
     print(card_1.activate())
     print(card_1.block())
-    print(card_1.secure_data())
 
 
 if __name__ == '__main__':
