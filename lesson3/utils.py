@@ -128,7 +128,9 @@ result_NB3 = get_pb_exchange_rate("EUR", "nbu", "14-04-2022")
 result_NB4 = get_pb_exchange_rate("AZN", "NationalBank", "14.04.2022")
 
 result_AlphaBank = get_pb_exchange_rate("USD", "AlphaBank", "04.14.2022")
-result_SomeUnsupportedBank = get_pb_exchange_rate("EUR", "SomeUnsupportedBank", "04.14.2022")
+result_SomeUnsupportedBank = get_pb_exchange_rate(
+    "EUR", "SomeUnsupportedBank", "04.14.2022"
+)
 
 print(result_PB1)
 print(result_PB2)
