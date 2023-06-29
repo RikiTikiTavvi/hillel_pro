@@ -97,7 +97,7 @@ def get_pb_exchange_rate(convert_currency: str, bank: str, rate_date: str) -> st
             if rate["currency"] == convert_currency:
                 valid_bank = validate_input_bank(bank)
                 if not valid_bank:
-                    return "Rates for this bank is not supported"
+                    return "Rates for this bank is not supported."
                 if valid_bank == "NBU":
                     try:
                         sale_rate = rate["saleRateNB"]
@@ -116,6 +116,29 @@ def get_pb_exchange_rate(convert_currency: str, bank: str, rate_date: str) -> st
         return f"error {response.status_code}"
 
 
-print(get_pb_exchange_rate("USD", "privatbank", "29.06.2022"))
-print(get_pb_exchange_rate("USD", "privatbank", "29.06.2022"))
-print(get_pb_exchange_rate("USD", "NBU", "29.06.2022"))
+result_PB1 = get_pb_exchange_rate("USD", "privatbank", "2022-01-02")
+result_PB2 = get_pb_exchange_rate("USD", "PB", "01.01.2022")
+result_PB3 = get_pb_exchange_rate("EUR", "pb", "14-04-2022")
+result_PB4 = get_pb_exchange_rate("GBP", "PrivatBank", "14.04.2022")
+
+
+result_NB1 = get_pb_exchange_rate("USD", "nationalbank", "2022-01-02")
+result_NB2 = get_pb_exchange_rate("USD", "NB", "01.01.2022")
+result_NB3 = get_pb_exchange_rate("EUR", "nbu", "14-04-2022")
+result_NB4 = get_pb_exchange_rate("AZN", "NationalBank", "14.04.2022")
+
+result_AlphaBank = get_pb_exchange_rate("USD", "AlphaBank", "04.14.2022")
+result_SomeUnsupportedBank = get_pb_exchange_rate("EUR", "SomeUnsupportedBank", "04.14.2022")
+
+print(result_PB1)
+print(result_PB2)
+print(result_PB3)
+print(result_PB4)
+
+print(result_NB1)
+print(result_NB2)
+print(result_NB3)
+print(result_NB4)
+
+print(result_AlphaBank)
+print(result_SomeUnsupportedBank)
