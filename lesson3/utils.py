@@ -117,12 +117,12 @@ def get_pb_exchange_rate(convert_currency: str, bank: str, rate_date: str) -> st
 
 
 result_PB1 = get_pb_exchange_rate("USD", "privatbank", "2022-01-02")
-result_PB2 = get_pb_exchange_rate("USD", "PB", "01.01.2022")
+result_PB2 = get_pb_exchange_rate("USD", "PB", "01.02.2022")
 result_PB3 = get_pb_exchange_rate("EUR", "pb", "14-04-2022")
 result_PB4 = get_pb_exchange_rate("GBP", "PrivatBank", "14.04.2022")
 
 result_NB1 = get_pb_exchange_rate("USD", "nationalbank", "2022-01-02")
-result_NB2 = get_pb_exchange_rate("USD", "NB", "01.01.2022")
+result_NB2 = get_pb_exchange_rate("USD", "NB", "01.02.2022")
 result_NB3 = get_pb_exchange_rate("EUR", "nbu", "14-04-2022")
 result_NB4 = get_pb_exchange_rate("AZN", "NationalBank", "14.04.2022")
 
